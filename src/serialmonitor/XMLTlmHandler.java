@@ -52,6 +52,10 @@ public class XMLTlmHandler {
 		deviceIdToWSId.put("B1VIS", "000016");
 		deviceIdToWSId.put("B1LUX", "000017");
 		deviceIdToWSId.put("B1FLOW", "000018");
+		deviceIdToWSId.put("B6IR", "000022");
+		deviceIdToWSId.put("B6VIS", "000023");
+		deviceIdToWSId.put("B6LUX", "000024");
+		deviceIdToWSId.put("T4-TEMP", "000025");
 		
 		imgIdToWSId.put("G-PRIME", "000001");
 		imgIdToWSId.put("B2-MON", "000002");
