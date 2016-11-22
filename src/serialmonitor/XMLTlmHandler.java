@@ -45,9 +45,7 @@ public class XMLTlmHandler {
 		deviceIdToWSId.put("B2-TEMP", "000009");
 		deviceIdToWSId.put("BASE-HUM", "000010");
 		deviceIdToWSId.put("BASE-TEMP", "000011");
-		deviceIdToWSId.put("B3-TEMP", "000012");
-		deviceIdToWSId.put("SHED-TEMP", "000013");
-		deviceIdToWSId.put("SHED-HUM", "000014");
+		
 		deviceIdToWSId.put("B1IR", "000015");
 		deviceIdToWSId.put("B1VIS", "000016");
 		deviceIdToWSId.put("B1LUX", "000017");
@@ -61,6 +59,9 @@ public class XMLTlmHandler {
 		imgIdToWSId.put("B2-MON", "000002");
 		imgIdToWSId.put("T3-MON", "000003");
 		
+		deviceIdToWSId.put("B3-TEMP", "000026");
+		deviceIdToWSId.put("SHED-TEMP", "000027");
+		deviceIdToWSId.put("SHED-HUM", "000028");
 	}
 	
 	public void post(String xmlSample) throws Exception{

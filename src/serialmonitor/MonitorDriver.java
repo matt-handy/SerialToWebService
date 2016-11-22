@@ -11,9 +11,17 @@ public class MonitorDriver {
 		
 		int counter = 0;
 		for (String port : args){
-			MonitorThread mt = new MonitorThread(port, counter + "");
-			mt.start();
-			monitors.add(mt);
+			if(port.contains("picDir")){
+				//Cheap hack to see if this argument is a Raspberry Pi
+				//picture landing zone
+				FileMonitor fm = new FileMonitor(port);
+				fm.start();
+				monitors.add(fm);
+			}else{
+				MonitorThread mt = new MonitorThread(port, counter + "");
+				mt.start();
+				monitors.add(mt);
+			}
 			counter++;
 		}
 		/*
