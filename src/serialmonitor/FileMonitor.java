@@ -28,7 +28,7 @@ public class FileMonitor extends Thread {
 					in.read(fileData);
 					in.close();
 					
-					if(fileData.length < 500000){//File should not be less than half a MB
+					if(fileData.length == 0){//File not yet written
 						continue;
 					}
 					
@@ -42,15 +42,17 @@ public class FileMonitor extends Thread {
 					varTmpDir.delete();
 					System.out.println("Waiting for new image");
 					
-					Thread.sleep(60000);
+					
 				} catch (IOException e) {
-					e.printStackTrace();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
-
+			try {
+				Thread.sleep(60000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	}
