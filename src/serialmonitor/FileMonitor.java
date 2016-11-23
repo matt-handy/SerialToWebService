@@ -23,12 +23,17 @@ public class FileMonitor extends Thread {
 			boolean exists = varTmpDir.exists();
 			if (exists) {
 				try {
-					System.out.println("Found file");
 					byte[] fileData = new byte[(int) varTmpDir.length()];
 					FileInputStream in = new FileInputStream(varTmpDir);
 					in.read(fileData);
 					in.close();
-
+					
+					if(fileData.length == 0){
+						continue;
+					}
+					
+					System.out.println("Found file of bytes: " + fileData.length);
+					
 					Date date = new Date();
 					SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss z");
 					imgPoster.post("000005", fileData, dt.format(date));
