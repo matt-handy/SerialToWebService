@@ -28,7 +28,7 @@ public class FileMonitor extends Thread {
 					in.read(fileData);
 					in.close();
 					
-					if(fileData.length == 0){
+					if(fileData.length < 500000){//File should not be less than half a MB
 						continue;
 					}
 					
