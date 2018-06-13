@@ -46,6 +46,10 @@ public class XMLTlmHandler {
 		deviceIdToWSId.put("BASE-HUM", "000010");
 		deviceIdToWSId.put("BASE-TEMP", "000011");
 		
+		deviceIdToWSId.put("N2-TEMP", "000019");
+		deviceIdToWSId.put("GAR-HUM-BAK", "000020");
+		deviceIdToWSId.put("GAR-TEMP-C", "000021");
+		
 		deviceIdToWSId.put("B1IR", "000015");
 		deviceIdToWSId.put("B1VIS", "000016");
 		deviceIdToWSId.put("B1LUX", "000017");
@@ -58,6 +62,7 @@ public class XMLTlmHandler {
 		imgIdToWSId.put("G-PRIME", "000001");
 		imgIdToWSId.put("B2-MON", "000002");
 		imgIdToWSId.put("T3-MON", "000003");
+		imgIdToWSId.put("B5-MON", "000004");
 		
 		deviceIdToWSId.put("B3-TEMP", "000026");
 		deviceIdToWSId.put("SHED-TEMP", "000027");
